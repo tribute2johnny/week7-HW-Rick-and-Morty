@@ -3,6 +3,7 @@ import './PageSelector.css';
 
 const PageSelector = ({handleSelectChange, pages}) => {
     return (
+        
         <div className="dropdown">
             <select onChange={handleSelectChange} className="dropdownSelector">
                 {pages.map(page => {
@@ -11,6 +12,7 @@ const PageSelector = ({handleSelectChange, pages}) => {
 
             </select>
         </div>
+        
     );
 };
 

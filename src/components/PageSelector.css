@@ -1,6 +1,7 @@
 .dropdown {
     overflow: hidden;
     position: fixed;
+    z-index: 999;
     
    
 }
@@ -25,7 +26,7 @@
   margin-left: 10px;
   margin-top: 10px;
   border-radius: 12px;
-  background-image: linear-gradient(to right, purple, green, purple);
+  background-image: linear-gradient(to right, rgb(198, 15, 198), rgb(37, 202, 37), rgb(198, 15, 198));
   display: flex;
   color: aliceblue;
   font-family: 'DynaPuff', cursive;

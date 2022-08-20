@@ -48,6 +48,7 @@ function App() {
     {name: "Page 42", url: "https://rickandmortyapi.com/api/character?page=42"}
   ]
 
+
   return (
     <div className="App">
       <header className="header">Rick and Morty Characters</header>

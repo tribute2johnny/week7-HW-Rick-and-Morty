@@ -1,5 +1,12 @@
 .outerContainer {
-    background-color: aqua;
+    background-color: rgb(0, 255, 255);
     text-align: center;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    
     
 }
+
+
+  
