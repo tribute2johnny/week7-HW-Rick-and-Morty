@@ -1,0 +1,38 @@
+.dropdown {
+    overflow: hidden;
+    position: fixed;
+    
+   
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+   
+
+}
+
+.dropdown .dropdownSelector {
+  font-size: 16px;
+  border: 2px solid black;
+  outline: none;
+  padding: 8px 16px;
+  font: inherit;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 12px;
+  background-image: linear-gradient(to right, purple, green, purple);
+  display: flex;
+  color: aliceblue;
+  font-family: 'DynaPuff', cursive;
+  
+
+}
+
+.dropdownSelector:hover .dropdownContent {
+    display: block;
+  }

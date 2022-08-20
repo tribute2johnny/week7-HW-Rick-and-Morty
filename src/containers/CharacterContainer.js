@@ -1,25 +1,39 @@
 import React, { useState, useEffect } from 'react';
  import CharacterList from '../components/CharacterList';
+ import PageSelector from '../components/PageSelector';
+ import './CharacterContainer.css';
 
-const CharacterContainer = () => {
+const CharacterContainer = ({pages}) => {
     
-    const [characters, setCharacter] = useState([]);
+    const [characters, setCharacters] = useState([]);
 
 
     useEffect(() => {
-        getCharacters();
-    }, [])
+        getCharacters(pages[0].url);
+    }, [pages])
     
-    const getCharacters = function(){
-        fetch("https://rickandmortyapi.com/api/character")
+    const getCharacters = url =>{
+        fetch(url)
         .then(res => res.json())
-        .then(characters => setCharacter(characters.results))
+        .then(characters => setCharacters(characters.results))
+    }
+
+    const handleSelectChange = event => {
+        getCharacters(event.target.value);
     }
 
 
     return(
         <div>
-        <CharacterList characters={characters}/>
+    
+        <div className="outerContainer">
+        <PageSelector
+        handleSelectChange={handleSelectChange}
+        pages={pages}
+        />
+        <CharacterList 
+        characters={characters}/>
+        </div>
         </div>
     )
 }

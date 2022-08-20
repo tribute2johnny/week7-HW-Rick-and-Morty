@@ -1,5 +1,6 @@
 import React from 'react';
 import ListItem from './ListItem';
+import './CharacterList.css';
 
 const CharacterList = ({characters}) => {
 
@@ -15,7 +16,7 @@ const CharacterList = ({characters}) => {
 
     return(
         <div>
-            <ul>
+            <ul className="listContainer">
                 {allCharacters}
             </ul>
         </div>
