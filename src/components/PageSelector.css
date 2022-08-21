@@ -1,6 +1,6 @@
 .dropdown {
     overflow: hidden;
-    position: fixed;
+    position: absolute;
     z-index: 999;
     
    

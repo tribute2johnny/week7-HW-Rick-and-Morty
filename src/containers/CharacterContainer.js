@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
- import CharacterList from '../components/CharacterList';
- import PageSelector from '../components/PageSelector';
- import './CharacterContainer.css';
+import CharacterDetail from '../components/CharacterDetail';
+import CharacterList from '../components/CharacterList';
+import PageSelector from '../components/PageSelector';
+import './CharacterContainer.css';
 
 const CharacterContainer = ({pages}) => {
     
     const [characters, setCharacters] = useState([]);
+    const [selectedCharacter, setSelectedCharacter] = useState(null)
 
 
     useEffect(() => {
@@ -18,6 +20,10 @@ const CharacterContainer = ({pages}) => {
         .then(characters => setCharacters(characters.results))
     }
 
+    const onCharacterClick = (character) => {
+        setSelectedCharacter(character);
+    }
+
     const handleSelectChange = event => {
         getCharacters(event.target.value);
     }
@@ -25,6 +31,9 @@ const CharacterContainer = ({pages}) => {
 
     return(
         <div>
+        <div>
+         {selectedCharacter ? <CharacterDetail character={selectedCharacter}/> : null}
+        </div>
     
         <div className="outerContainer">
         <PageSelector
@@ -32,7 +41,7 @@ const CharacterContainer = ({pages}) => {
         pages={pages}
         />
         <CharacterList 
-        characters={characters}/>
+        characters={characters} onCharacterClick={onCharacterClick}/>
         </div>
         </div>
     )
