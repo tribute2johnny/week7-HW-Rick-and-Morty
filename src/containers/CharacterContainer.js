@@ -36,7 +36,7 @@ const CharacterContainer = ({pages}) => {
          {selectedCharacter ? <CharacterDetail character={selectedCharacter}/> : <img className="head-image" src={ require(`./kindpng_1021587.png`)}/>}
          <div className="view-box-text">
          {selectedCharacter ? <></>: <p>Show Me What You Got!</p>}
-         {selectedCharacter ? <></>: <p>Click on a character to see what they got!!</p>}
+         {selectedCharacter ? <></>: <p>Click on a character to display what they got here!!</p>}
          </div>
          </div>
          <h1 className="h1-list">Characters</h1>
