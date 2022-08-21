@@ -1,14 +1,15 @@
 import React from 'react';
+import './CharacterDetail.css';
 
 const CharacterDetail = ({character}) => {
 
     return (
-        <div className="charImage">
+        <div className="char-detail">
             <div>
-                <img className="charImageDetail" src={character.image} alt="Wubba lubba dub dub"></img>
+                <img className="char-image" src={character.image} alt="Wubba lubba dub dub"></img>
             </div>
-            <div>
-                <p className="charName">{character.name}</p>
+            <div className="char-info">
+                <p className="char-name">{character.name}</p>
                 <p>Status: {character.status}</p>
                 <p>Gender: {character.gender}</p>
                 <p>Species: {character.species}</p>

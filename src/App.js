@@ -54,6 +54,7 @@ function App() {
       <header className="header">Rick and Morty Characters</header>
       <p className="separator"></p>
       <CharacterContainer pages={pages}/>
+      <footer>This app was created using data from https://rickandmortyapi.com/api</footer>
     </div>
   );
 }

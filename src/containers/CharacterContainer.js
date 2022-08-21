@@ -29,19 +29,25 @@ const CharacterContainer = ({pages}) => {
     }
 
 
+
     return(
         <div>
-        <div>
-         {selectedCharacter ? <CharacterDetail character={selectedCharacter}/> : null}
-        </div>
-    
-        <div className="outerContainer">
+        <div className="view-box">
+         {selectedCharacter ? <CharacterDetail character={selectedCharacter}/> : <img className="head-image" src={ require(`./kindpng_1021587.png`)}/>}
+         <div className="view-box-text">
+         {selectedCharacter ? <></>: <p>Show Me What You Got!</p>}
+         {selectedCharacter ? <></>: <p>Click on a character to see what they got!!</p>}
+         </div>
+         </div>
+         <h1 className="h1-list">Characters</h1>
+        <div className="outer-container">
         <PageSelector
         handleSelectChange={handleSelectChange}
         pages={pages}
         />
         <CharacterList 
         characters={characters} onCharacterClick={onCharacterClick}/>
+        
         </div>
         </div>
     )

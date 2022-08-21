@@ -16,7 +16,7 @@ const CharacterList = ({characters, onCharacterClick}) => {
 
     return(
         <div>
-            <ul className="listContainer">
+            <ul className="list-container">
                 {allCharacters}
             </ul>
         </div>

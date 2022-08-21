@@ -5,9 +5,9 @@ const PageSelector = ({handleSelectChange, pages}) => {
     return (
         
         <div className="dropdown">
-            <select onChange={handleSelectChange} className="dropdownSelector">
+            <select onChange={handleSelectChange} className="dropdown-selector">
                 {pages.map(page => {
-                    return <option key={page.name} value={page.url} className="dropdownContent">{page.name}</option>
+                    return <option key={page.name} value={page.url} className="dropdown-content">{page.name}</option>
                 })}
 
             </select>

@@ -8,9 +8,11 @@ const ListItem = ({character, onCharacterClick}) => {
     }
     
     return(
-        <div className="listItem">
-            <p className="charName" onClick={handleClick}>{character.name}</p>
-            <img className="charImage" src={character.image} alt="Waba luba dub dub"></img>
+        <div className="list-item">
+            <p className="char-name">{character.name}</p>
+            <img className="char-image" src={character.image} alt="Waba luba dub dub"></img>
+            <button onClick={handleClick} className="detail-button">Show Me What You Got!</button>
+            
             
             
             
